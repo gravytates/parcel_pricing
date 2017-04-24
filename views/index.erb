@@ -1,0 +1,37 @@
+<h1>Calculate your shipping cost</h1>
+
+<form action="/result">
+  <div class="form-group">
+    <label for="width">Width of your parcel</label>
+    <input id="width" name="width" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+    <label for="length">Length of your parcel</label>
+    <input id="length" name="length" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+    <label for="height">Height of your parcel</label>
+    <input id="height" name="height" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+    <label for="weight">Weight of your parcel</label>
+    <input id="weight" name="weight" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+    <label for="distance">Distance to destination</label>
+    <input id="distance" name="distance" class="form-control" type="text">
+  </div>
+
+  <div class="form-group">
+    <label for="mode">Mode of Transit:</label>
+    <select id="mode" name="mode" class="form-control">
+      <option>Choose your mode</option>
+      <option>Truck</option>
+      <option>Plane</option>
+      <option>Bike</option>
+      <option>Cat-sled</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn">Tabulate!</button>
+</form>
