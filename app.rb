@@ -14,7 +14,11 @@ get('/result') do
   @weight = params.fetch('weight')
   @mode = params.fetch('mode')
   @distance = params.fetch('distance')
+  @packaging = params.fetch('packaging')
   parcel = Parcel.new(@width, @length, @height, @weight, @mode, @distance)
   @cost = parcel.shipping_cost
+  if @packaging.==('gift_wrapped')
+    @cost += parcel.gift_cost
+  end
   erb(:result)
 end

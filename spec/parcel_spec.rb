@@ -10,7 +10,7 @@ describe(Parcel) do
   end
 
   describe('#shipping_cost') do
-    it('finds price for shipping based on volume and other shippng parameters') do
+    it('finds price for shipping based on volume and other shipping parameters') do
       new_parcel = Parcel.new(1,1,1,1,"Bike",1)
       expect(new_parcel.shipping_cost).to(eq(11.3))
     end
