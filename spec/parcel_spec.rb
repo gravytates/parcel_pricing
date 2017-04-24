@@ -15,4 +15,11 @@ describe(Parcel) do
       expect(new_parcel.shipping_cost).to(eq(11.3))
     end
   end
+
+  describe('#gift_cost') do
+    it('finds extra price for gift wrapping based on surface area') do
+      new_parcel = Parcel.new(1,1,1,1,"bike",1)
+      expect(new_parcel.gift_cost).to(eq(0.06))
+    end
+  end
 end

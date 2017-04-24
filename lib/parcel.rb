@@ -34,4 +34,13 @@ class Parcel
     cost
   end
 
+  define_method(:gift_cost) do
+    gift_cost = 0
+    surface_area = (2*(@length*@width)) + (2 * (@length*@height)) + (2*(@width*@height))
+    (1..surface_area).each do
+      gift_cost += 0.01
+    end
+    gift_cost.round(2)
+  end
+
 end
